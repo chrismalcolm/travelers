@@ -51,6 +51,9 @@ typedef std::vector<std::vector<float>> matrix;
 typedef std::vector<int> permutation;
 typedef std::pair<std::vector<int>, float> permutation_cost;
 
+const int MAX_BATCH = 13;
+const int MAX_PATHS = 40320;
+
 /*
     Factorial function.
 */
@@ -224,7 +227,7 @@ std::vector<int> travel(
     const point& destination,
     const std::vector<point>& points,
     const float& calibration,
-    const int& max_paths=40320
+    const int& max_paths=MAX_PATHS
 )
 {
     std::random_device rd;
@@ -318,7 +321,7 @@ std::vector<int> get_batches(int n, int m)
 std::vector<int> travels(std::vector<point> points, const float& calibration)
 {
     int n = points.size();
-    std::vector<int> batch_counts = get_batches(n, 13);
+    std::vector<int> batch_counts = get_batches(n, MAX_BATCH);
 
     std::random_device rd;
     std::mt19937 gen(rd());
