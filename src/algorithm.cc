@@ -11,7 +11,7 @@ const int MAX_BATCH = 13;
 const int MAX_PATHS = 40320;
 
 /*
-    Single unit of the Travelers Algorithm
+    Single unit of the Travellers Algorithm
 
     A set of paths are generated. These paths start at the 'source' point, go
     through each point in 'points' and end at the 'destination' point.
@@ -110,9 +110,9 @@ void shall(
 }
 
 /*
-     Batching unit of the Travelers Algorithm
+     Batching unit of the Travellers Algorithm
 
-     Points are batched the the single unit Travelers Algorithm is applied to
+     Points are batched the the single unit Travellers Algorithm is applied to
      each batch, returning the indicies in the order as if the path sequentially
      passes through each batch.
 */

@@ -1,5 +1,5 @@
-# Travelers Algorithm
-C++ implementation of the Travelers Algorithm.
+# Travellers Algorithm
+C++ implementation of the Travellers Algorithm.
 
 Authored by Christopher Malcolm (chrismalcolm).
 
@@ -7,7 +7,7 @@ Authored by Christopher Malcolm (chrismalcolm).
 A set of paths is generated using the n-dimension data points in 'points'.
 They are ordered with a scale with 0 being the path of smallest distance and
 1 being the path of largest distance. On this scale, the path closest to the
-'calibration' is chosen, and the indicies of the points in the path (as they
+'calibration' is chosen, and the indices of the points in the path (as they
 appear in 'points') is returned.
 
 Since it becomes exceedingly difficult to generate all paths for larger sets
@@ -38,4 +38,4 @@ Example usage using g++ compiler
 `g++ -L/usr/include src/sampling.cc src/utilities.cc src/algorithm.cc -o algorithm -lboost_filesystem -lboost_system -lboost_thread && ./algorithm 4 2 1.0 0.0 0.0 0.0 0.1 1.0 0.0 1.0 1.0
 1 3 0 2`
 
-Here the algorithm is performed on 4 points in 2 dimensions, calibration 1.0 with the points (0.0, 0.0), (0.0 0.1), (1.0, 0.0), (1.0, 1.0). The directoty `/usr/include` should be replaced with the location of the boost library.
+Here the algorithm is performed on 4 points in 2 dimensions, calibration 1.0 with the points (0.0, 0.0), (0.0 0.1), (1.0, 0.0), (1.0, 1.0). The directory `/usr/include` should be replaced with the location of the boost library.
